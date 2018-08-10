@@ -18,12 +18,8 @@ elif [ $TRAVIS_BRANCH == "dev" ] ; then
     ls
 
 elif [ $TRAVIS_BRANCH == "travis" ] ; then
-    eval "$(ssh-agent -s)"
-    chmod 600 ./deploy_key
-    echo -e "Host 35.227.98.126\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-    ssh-add ./deploy_key
-    ssh -i ./deploy_key travis@35.227.98.126
     pwd
+    cd /var/www/html/affiliates_connect_demo
     ls
 
 else
