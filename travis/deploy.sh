@@ -20,6 +20,8 @@ elif [ $TRAVIS_BRANCH == "dev" ] ; then
 elif [ $TRAVIS_BRANCH == "travis" ] ; then
 
     ssh -o "StrictHostKeyChecking no" -q travis@35.227.98.126
+    pwd
+    cd /var/www/html/affiliates_connect_demo
     ls
 
 else
