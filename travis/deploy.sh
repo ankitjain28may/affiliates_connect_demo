@@ -5,7 +5,7 @@ set -xe
 
 cd /var/www/html/affiliates_connect_demo
 echo "Pulling changes from Git"
-git pull origin dev
+sudo git pull origin dev
 echo "Running Composer Install"
 docker exec -it affiliates_connect composer install
 echo "Running update entities"
