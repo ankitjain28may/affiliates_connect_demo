@@ -21,8 +21,8 @@ elif [ $TRAVIS_BRANCH == "travis" ] ; then
 
     # setup ssh agent, git config and remote
     eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/travis_rsa
     ls
+    ssh-add ~/.ssh/authorized_keys
 
 else
 
