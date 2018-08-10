@@ -6,3 +6,4 @@
 .env
 
 travis_rsa.pub
+deploy_key
