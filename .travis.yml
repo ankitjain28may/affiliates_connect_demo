@@ -16,4 +16,5 @@ before_deploy:
   -in travis_rsa.enc -out ~/.ssh/travis_rsa -d
 after_success:
 - chmod 600 ~/.ssh/travis_rsa
+- ls -lath ~/.ssh
 - "./travis/deploy.sh"
