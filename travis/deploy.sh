@@ -3,6 +3,12 @@
 # print outputs and exit on first failure
 set -xe
 
-pwd
 cd /var/www/html/affiliates_connect_demo
-ls
+echo "Pulling changes from Git"
+git pull origin dev
+echo "Running Composer Install"
+docker exec -it affiliates_connect composer install
+echo "Running update entities"
+docker exec -it affiliates_connect vendor/bin/drupal upe
+echo "Running Cache rebuild"
+docker exec -it affiliates_connect vendor/bin/drupal cr
