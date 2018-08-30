@@ -72,7 +72,12 @@ class ScriptHandler {
           ],
         ];
       }
-      $settings['hash_salt'] = '7nfuuEAvVpsPyYz9Fdj9OuP6ElsxOLR4y2FFkzPYEm6yMNGDfK9XLIR58Qe6FQfZYoCk-4Ypyw';
+      $settings['settings'] = [
+        'hash_salt' => (object)[
+          'value' => '7nfuuEAvVpsPyYz9Fdj9OuP6ElsxOLR4y2FFkzPYEm6yMNGDfK9XLIR58Qe6FQfZYoCk-4Ypyw',
+          'required' => TRUE,
+        ],
+      ];
 
       drupal_rewrite_settings($settings, $drupalRoot . '/sites/default/settings.php');
       $fs->chmod($drupalRoot . '/sites/default/settings.php', 0666);
